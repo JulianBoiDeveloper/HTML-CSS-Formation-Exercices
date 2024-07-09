@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord - Gestion de Projets</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+    <header>
+        <h1>Tableau de Bord</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Vue d'ensemble</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#settings">Paramètres</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="overview">
+            <h2>Vue d'ensemble</h2>
+            <div class="grid-container">
+                <div class="card">Visiteurs : 131</div>
+                <div class="card">Actuel : 5</div>
+                <div class="card">Sur cette page : 5</div>
+                <div class="card">Inscription : 167</div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Projets</h2>
+            <form id="project-form">
+                <label for="project-name">Nom du projet :</label>
+                <input type="text" id="project-name" name="project-name" placeholder="Nom du projet.." required>
+                
+                <label for="project-description">Description :</label>
+                <textarea id="project-description" name="project-description" placeholder="Ecris ta description..." required></textarea>
+                
+                <button type="submit">Ajouter le projet</button>
+            </form>
+            <div class="project-list">
+                <div class="project-card">Projet 1</div>
+                <div class="project-card">Projet 2</div>
+            </div>
+        </section>
+        <section id="settings">
+            <h2>Paramètres</h2>
+            <input type="checkbox" id="theme-toggle" hidden>
+            <label for="theme-toggle" id="theme-label">Changer le thème</label>
+
+        </section>
+    </main>
+</body>
+</html>

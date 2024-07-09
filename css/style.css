@@ -1,0 +1,150 @@
+/* styles.css */
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #fff;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+}
+
+[data-theme="dark"] {
+    --primary-color: #333;
+    --secondary-color: #4CAF50;
+    --background-color: #1c1c1c;
+    --text-color: #f0f0f0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+main {
+    padding: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-card {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    border-radius: 5px;
+    flex: 1 1 calc(33.333% - 1rem);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        flex: 1 1 100%;
+    }
+}
+
+#toggle-theme {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#toggle-theme:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+#theme-toggle:checked ~ main {
+    --primary-color: #333;
+    --secondary-color: #4CAF50;
+    --background-color: #1c1c1c;
+    --text-color: #f0f0f0;
+}
+
+#theme-label {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+#theme-label:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
